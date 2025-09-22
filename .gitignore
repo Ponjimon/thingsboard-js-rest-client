@@ -2,6 +2,24 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,pycharm
 
+# JavaScript/TypeScript specific
+node_modules/
+.pnpm-store/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.local
+.env.production
+.env.test
+coverage/
+*.lcov
+test-results/
+.vscode/
+
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -124,7 +142,6 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/

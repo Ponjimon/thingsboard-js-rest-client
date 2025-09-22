@@ -1,0 +1,109 @@
+/**
+ * Copyright 2025. ThingsBoard
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+export interface EntityId {
+  id: string;
+  entityType: string;
+}
+
+export interface UserId extends EntityId {
+  entityType: 'USER';
+}
+
+export interface TenantId extends EntityId {
+  entityType: 'TENANT';
+}
+
+export interface CustomerId extends EntityId {
+  entityType: 'CUSTOMER';
+}
+
+export interface DeviceId extends EntityId {
+  entityType: 'DEVICE';
+}
+
+export interface AssetId extends EntityId {
+  entityType: 'ASSET';
+}
+
+export interface DashboardId extends EntityId {
+  entityType: 'DASHBOARD';
+}
+
+export interface DeviceProfileId extends EntityId {
+  entityType: 'DEVICE_PROFILE';
+}
+
+export interface OtaPackageId extends EntityId {
+  entityType: 'OTA_PACKAGE';
+}
+
+export interface EdgeId extends EntityId {
+  entityType: 'EDGE';
+}
+
+export interface JsonNode {
+  [key: string]: unknown;
+}
+
+export interface TokenInfo {
+  token: string;
+  refreshToken: string;
+  exp: number;
+}
+
+export interface PageData<T> {
+  data: T[];
+  totalPages: number;
+  totalElements: number;
+  hasNext: boolean;
+}
+
+export interface LoginRequest {
+  username: string;
+  password: string;
+}
+
+export interface PublicLoginRequest {
+  publicId: string;
+}
+
+export interface LoginResponse {
+  token: string;
+  refreshToken: string;
+}
+
+export interface JwtPair {
+  token: string;
+  refreshToken: string;
+}
+
+export type EntityType =
+  | 'USER'
+  | 'TENANT'
+  | 'CUSTOMER'
+  | 'DEVICE'
+  | 'ASSET'
+  | 'DASHBOARD'
+  | 'DEVICE_PROFILE'
+  | 'OTA_PACKAGE'
+  | 'EDGE'
+  | 'ENTITY_VIEW'
+  | 'ALARM'
+  | 'RULE_CHAIN'
+  | 'RULE_NODE'
+  | 'WIDGET_TYPE'
+  | 'WIDGETS_BUNDLE';
